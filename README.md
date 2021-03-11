@@ -15,13 +15,11 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 ## Provision S3 locally
 
 The easiest way to start working with S3 is to run a local instance as a container.
-
 ```shell script
 docker run -it --publish 4566:4566 -e SERVICES=s3 -e START_WEB=0 localstack/localstack:0.12.7
 ```
 
 Create an AWS profile for your local instance using AWS CLI:
-
 ```shell script
 $ aws configure --profile localstack
 AWS Access Key ID [None]: test-key
@@ -31,7 +29,6 @@ Default output format [None]:
 ```
 
 Create a S3 bucket using AWS CLI
-
 ```shell script
 aws s3 mb s3://quarkus.s3.quickstart --profile localstack --endpoint-url=http://localhost:4566
 ```
@@ -60,6 +57,13 @@ If you want to build an _über-jar_, execute the following command:
 ```
 
 The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
+
+### docker-compose
+
+Run the application and the S3 local bucket using docker-compose:
+```shell script
+docker-compose up
+```
 
 ## Creating a native executable
 
