@@ -82,15 +82,3 @@ If you want to learn more about building native executables, please consult http
 Open a browser to [http://localhost:8080/s3.html](http://localhost:8080/s3.html).
 
 Upload new file to the current S3 bucket via the form and see the list of files in the bucket.
-
-## Related guides
-
-- Reactive Routes ([guide](https://quarkus.io/guides/reactive-routes)): REST framework offering the route model to define non blocking endpoints
-
-## Provided examples
-
-### RESTEasy JAX-RS example
-
-REST is easy peasy with this Hello World RESTEasy resource.
-
-[Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
